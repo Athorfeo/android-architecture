@@ -3,6 +3,7 @@ package io.github.athorfeo.architecture.database.entity
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import io.github.athorfeo.architecture.model.Movie
 
 @Entity(tableName = "movies")
 data class MovieEntity(
@@ -17,8 +18,9 @@ data class MovieEntity(
     val originalTitle: String,
 
     @ColumnInfo(name = "overview")
-    val overview: String,
-
-    @ColumnInfo(name = "quantity")
-    var quantity: Int
+    val overview: String
 )
+
+fun List<MovieEntity>.toDomainModel(): List<Movie>{
+    return map { Movie(it.id, it.title, it.originalTitle, it.overview) }
+}

@@ -30,8 +30,12 @@ class DashboardFragment: BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.messages.observe(viewLifecycleOwner, Observer {
+        /*viewModel.messages.observe(viewLifecycleOwner, Observer {
             Timber.tag("ArchApp").i(it)
+        })*/
+
+        viewModel.movies.observe(viewLifecycleOwner, Observer {
+            Timber.tag("ArchApp").i(it.toString())
         })
     }
 }
