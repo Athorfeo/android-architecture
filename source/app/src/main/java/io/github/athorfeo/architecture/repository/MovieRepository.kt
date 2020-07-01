@@ -23,7 +23,7 @@ class MovieRepository @Inject constructor(
     private val movieDao: MovieDao,
     private val api: Api
 ) {
-    fun getFromNetwork(): Flow<Resource<List<Movie>>> {
+    private fun getFromNetwork(): Flow<Resource<List<Movie>>> {
         val flow = flow {
             val response = api.searchMovies("f33b50a94cda8f40e747fbca8ce620f8", "batman", "1")
 
