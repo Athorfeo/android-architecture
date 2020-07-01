@@ -31,7 +31,6 @@ class MovieRepository @Inject constructor(
                 is ApiSuccessResponse -> {
                     //emit(Resource.loading(null, "Saving data in database..."))
                     //movieDao.insertAll(*apiResponse.body.results.toDatabaseModel().toTypedArray())
-                    //emit(Resource.loading(null, "Saved data!"))
 
                     emit(Resource.success(apiResponse.body.results.toDomainModel()))
                 }
