@@ -10,7 +10,8 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import io.github.athorfeo.architecture.R
 import io.github.athorfeo.architecture.databinding.FragmentDetailBinding
-import io.github.athorfeo.architecture.ui.fragment.BaseFragment
+import io.github.athorfeo.architecture.model.Status
+import io.github.athorfeo.architecture.ui.base.fragment.BaseFragment
 import io.github.athorfeo.architecture.ui.item.search.SearchViewModel
 import timber.log.Timber
 
@@ -27,6 +28,7 @@ class DetailFragment: BaseFragment(), View.OnClickListener {
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_detail, null, false)
+        initializeFragment(viewModel)
         return binding.root
     }
 
@@ -35,7 +37,20 @@ class DetailFragment: BaseFragment(), View.OnClickListener {
         binding.clickListener = this
 
         viewModel.getItem(args.id).observe(viewLifecycleOwner, Observer {
-            Timber.tag("AthorArch").d(it.toString())
+
+            when(it.status){
+                Status.LOADING -> {
+                    setLoading(true)
+                }
+                Status.ERROR -> {
+                    setLoading(false)
+                    viewModel.setError(it.code, it.message)
+                }
+                Status.SUCCESS -> {
+                    setLoading(false)
+                    Timber.tag("AthorArch").d(it.toString())
+                }
+            }
         })
     }
 

@@ -1,8 +1,7 @@
-package io.github.athorfeo.architecture.ui.activity
+package io.github.athorfeo.architecture.ui.base.activity
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.ui.*
 import io.github.athorfeo.architecture.R
@@ -27,7 +26,7 @@ class MainActivity: BaseActivity() {
         navController = supportFragmentManager.findNavController()
 
         val topLevelDestinations = setOf(
-            R.id.dashboardFragment
+            R.id.searchFragment
         )
 
         appBarConfiguration = AppBarConfiguration

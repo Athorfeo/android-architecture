@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:name=".ArchApp">
-        <activity android:name=".ui.activity.MainActivity">
+        <activity android:name="io.github.athorfeo.architecture.ui.base.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.BaseActivity"/>
+        <activity android:name="io.github.athorfeo.architecture.ui.base.activity.BaseActivity"/>
     </application>
 
 </manifest>

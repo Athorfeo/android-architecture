@@ -8,7 +8,7 @@ import dagger.Reusable
 import dagger.multibindings.IntoMap
 import io.github.athorfeo.architecture.di.annotation.ViewModelKey
 import io.github.athorfeo.architecture.ui.item.search.SearchViewModel
-import io.github.athorfeo.architecture.viewmodel.AppViewModelFactory
+import io.github.athorfeo.architecture.ui.base.viewmodel.AppViewModelFactory
 
 @Module
 abstract class ViewModelModule {

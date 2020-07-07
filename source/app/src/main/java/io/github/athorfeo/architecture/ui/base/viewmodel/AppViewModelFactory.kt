@@ -1,4 +1,4 @@
-package io.github.athorfeo.architecture.viewmodel
+package io.github.athorfeo.architecture.ui.base.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

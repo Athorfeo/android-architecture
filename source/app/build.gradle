@@ -97,6 +97,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
     testImplementation "androidx.arch.core:core-testing:$arch_version"
 
+    /* LiveEvent */
+    implementation "com.github.hadilq.liveevent:liveevent:$live_event_version"
+
     // Navigation
     implementation "androidx.navigation:navigation-fragment:$navigation_version"
     implementation "androidx.navigation:navigation-ui:$navigation_version"

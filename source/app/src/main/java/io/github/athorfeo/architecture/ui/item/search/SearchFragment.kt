@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import io.github.athorfeo.architecture.R
 import io.github.athorfeo.architecture.databinding.FragmentSearchBinding
-import io.github.athorfeo.architecture.ui.fragment.BaseFragment
+import io.github.athorfeo.architecture.ui.base.fragment.BaseFragment
 import timber.log.Timber
 
 class SearchFragment: BaseFragment(), View.OnClickListener {
@@ -24,6 +24,7 @@ class SearchFragment: BaseFragment(), View.OnClickListener {
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_search, null, false)
+        initializeFragment(viewModel)
         return binding.root
     }
 

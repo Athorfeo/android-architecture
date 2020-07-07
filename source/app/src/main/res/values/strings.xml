@@ -1,3 +1,36 @@
 <resources>
     <string name="app_name">AthorArch</string>
+    <!-- Content -->
+    <string name="image_description">Image Content Description</string>
+
+    <!-- Button -->
+    <string name="action_back">Atrás</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_filter">Filtrar</string>
+    <string name="action_accept">Aceptar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_delete_product">Eliminar producto</string>
+
+    <!-- Error -->
+    <string name="error_title_error">Error</string>
+    <string name="error_title_alert">Alerta</string>
+    <string name="error_title_information">Información</string>
+    <string name="error_title_validation_purchase">Error al guardar la factura</string>
+    <string name="error_title_validation_customer">Asigne un cliente</string>
+    <string name="error_title_quantity_price_purchase">La cantidad sobrepasa al stock</string>
+    <string name="error_title_zero_quantity_price">La cantidad no puede ser 0</string>
+    <string name="error_title_empty_profit_list">No hay ganancias creadas</string>
+
+    <string name="error_text_empty">Vacío</string>
+    <string name="error_text_default">Ha ocurrido un error, intente nuevamente</string>
+    <string name="error_text_no_internet">No hay conexión a internet</string>
+    <string name="error_text_query_database">La consulta ha la base de datos ha fallado</string>
+    <string name="error_text_data_empty">No hay datos que mostrar</string>
+
+    <string name="error_text_http_internal_error">Error interno del servidor</string>
+    <string name="error_text_http_not_found">Error interno del servidor</string>
+    <string name="error_text_form_validate">La validación de los datos ha fallado, intente nuevamente.</string>
+    <string name="error_text_form_category">Debe seleccionar la categoría antes de continuar.</string>
+
 </resources>
