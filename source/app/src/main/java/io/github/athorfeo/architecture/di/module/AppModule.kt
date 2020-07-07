@@ -40,7 +40,7 @@ class AppModule{
         return Retrofit.Builder()
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("https://api.themoviedb.org/")
+            .baseUrl("https://api.mercadolibre.com/")
             .build()
             .create(Api::class.java)
     }
