@@ -23,6 +23,7 @@ buildscript {
     ext.dagger_version = "2.27"
     ext.timber_version = "4.7.1"
     ext.logging_interceptor_version = "3.11.0"
+    ext.glide_version = "4.11.0"
 
     ext.junit_version = "4.13"
     ext.test_junit_version = "1.1.1"

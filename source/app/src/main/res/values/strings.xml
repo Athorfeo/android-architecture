@@ -3,6 +3,8 @@
     <!-- Content -->
     <string name="image_description">Image Content Description</string>
 
+    <string name="text_money">$%1$s</string>
+
     <!-- Button -->
     <string name="action_back">Atrás</string>
     <string name="action_next">Siguiente</string>
