@@ -15,7 +15,6 @@ import io.github.athorfeo.architecture.di.annotation.Injectable
 import io.github.athorfeo.architecture.model.ErrorResource
 import io.github.athorfeo.architecture.ui.base.viewmodel.BaseViewModel
 import io.github.athorfeo.architecture.utils.error.AppCode
-import io.github.athorfeo.architecture.utils.error.AppCode.Companion.ERROR_PURCHASE_EMPTY_PRICES
 import timber.log.Timber
 import java.net.HttpURLConnection
 import javax.inject.Inject

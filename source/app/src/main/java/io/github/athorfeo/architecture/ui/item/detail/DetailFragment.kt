@@ -35,7 +35,6 @@ class DetailFragment: BaseFragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.clickListener = this
-
         viewModel.getItem(args.id).observe(viewLifecycleOwner, Observer {
 
             when(it.status){
@@ -49,6 +48,7 @@ class DetailFragment: BaseFragment(), View.OnClickListener {
                 Status.SUCCESS -> {
                     setLoading(false)
                     Timber.tag("AthorArch").d(it.toString())
+                    binding.item = it.data
                 }
             }
         })

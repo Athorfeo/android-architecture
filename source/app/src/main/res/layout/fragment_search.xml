@@ -67,8 +67,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Ingrese su busqueda"
-                            android:text="@={mViewModel.searchQuery}"/>
+                            android:hint="@string/text_hint_search"
+                            android:text="@={mViewModel.searchQuery}" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <Button
@@ -77,11 +77,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_marginBottom="8dp"
-                        android:text="Buscar"
+                        android:onClick="@{clickListener}"
+                        android:text="@string/text_search"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
-                        app:layout_constraintTop_toBottomOf="@+id/text_input_search"
-                        android:onClick="@{clickListener}"/>
+                        app:layout_constraintTop_toBottomOf="@+id/text_input_search" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

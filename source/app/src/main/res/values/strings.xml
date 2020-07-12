@@ -4,6 +4,9 @@
     <string name="image_description">Image Content Description</string>
 
     <string name="text_money">$%1$s</string>
+    <string name="text_search">Search</string>
+    <string name="text_hint_search">Enter your search</string>
+    <string name="text_label_warranty">Warranty</string>
 
     <!-- Button -->
     <string name="action_back">Atrás</string>
@@ -16,23 +19,15 @@
 
     <!-- Error -->
     <string name="error_title_error">Error</string>
-    <string name="error_title_alert">Alerta</string>
-    <string name="error_title_information">Información</string>
-    <string name="error_title_validation_purchase">Error al guardar la factura</string>
-    <string name="error_title_validation_customer">Asigne un cliente</string>
-    <string name="error_title_quantity_price_purchase">La cantidad sobrepasa al stock</string>
-    <string name="error_title_zero_quantity_price">La cantidad no puede ser 0</string>
-    <string name="error_title_empty_profit_list">No hay ganancias creadas</string>
+    <string name="error_title_alert">Alert</string>
+    <string name="error_title_information">Information</string>
 
-    <string name="error_text_empty">Vacío</string>
-    <string name="error_text_default">Ha ocurrido un error, intente nuevamente</string>
-    <string name="error_text_no_internet">No hay conexión a internet</string>
-    <string name="error_text_query_database">La consulta ha la base de datos ha fallado</string>
-    <string name="error_text_data_empty">No hay datos que mostrar</string>
+    <string name="error_text_empty">Empty</string>
+    <string name="error_text_default">An error has occurred, try again</string>
+    <string name="error_text_no_internet">There is no Internet conection</string>
+    <string name="error_text_data_empty">No data to display</string>
 
-    <string name="error_text_http_internal_error">Error interno del servidor</string>
-    <string name="error_text_http_not_found">Error interno del servidor</string>
-    <string name="error_text_form_validate">La validación de los datos ha fallado, intente nuevamente.</string>
-    <string name="error_text_form_category">Debe seleccionar la categoría antes de continuar.</string>
-
+    <string name="error_text_http_internal_error">Server internal error</string>
+    <string name="error_text_http_not_found">Server internal error</string>
+    <string name="error_text_form_validate">Data validation failed, try again.</string>
 </resources>

@@ -7,49 +7,69 @@
         <variable
             name="clickListener"
             type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="item"
+            type="io.github.athorfeo.architecture.model.Item"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.3" />
-
         <ImageView
             android:id="@+id/image_item"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            loadImages="@{item.pictures}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
             android:scaleType="fitXY"
-            app:layout_constraintBottom_toTopOf="@+id/guideline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/bg_item" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="16dp"
-            android:text="TextView"
+            android:text="@{item.title}"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_item" />
 
         <TextView
             android:id="@+id/text_value"
+            asMoney="@{item.price}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="@+id/text_title"
             app:layout_constraintStart_toStartOf="@+id/text_title"
             app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+        <TextView
+            android:id="@+id/text_label_warranty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_label_warranty"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Overline"
+            app:layout_constraintStart_toStartOf="@+id/text_value"
+            app:layout_constraintTop_toBottomOf="@+id/text_value" />
+
+        <TextView
+            android:id="@+id/text_warranty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{item.warranty}"
+            app:layout_constraintEnd_toEndOf="@+id/text_value"
+            app:layout_constraintStart_toStartOf="@+id/text_label_warranty"
+            app:layout_constraintTop_toBottomOf="@+id/text_label_warranty" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
