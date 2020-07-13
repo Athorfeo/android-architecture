@@ -8,11 +8,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import io.github.athorfeo.architecture.testing.OpenForTesting
 import io.github.athorfeo.architecture.R
 import io.github.athorfeo.architecture.databinding.FragmentSearchBinding
 import io.github.athorfeo.architecture.ui.base.fragment.BaseFragment
 import timber.log.Timber
 
+@OpenForTesting
 class SearchFragment: BaseFragment(), View.OnClickListener {
     private lateinit var binding: FragmentSearchBinding
     private val viewModel: SearchViewModel by viewModels { viewModelFactory }

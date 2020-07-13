@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import io.github.athorfeo.architecture.testing.OpenForTesting
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import io.github.athorfeo.architecture.R
 import io.github.athorfeo.architecture.databinding.DialogLoadingBinding
@@ -19,6 +20,7 @@ import timber.log.Timber
 import java.net.HttpURLConnection
 import javax.inject.Inject
 
+@OpenForTesting
 open class BaseFragment : Fragment(), Injectable {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory

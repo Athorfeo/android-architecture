@@ -9,10 +9,12 @@ import io.github.athorfeo.architecture.network.response.ApiEmptyResponse
 import io.github.athorfeo.architecture.network.response.ApiErrorResponse
 import io.github.athorfeo.architecture.network.response.ApiResponse
 import io.github.athorfeo.architecture.network.response.ApiSuccessResponse
+import io.github.athorfeo.architecture.testing.OpenForTesting
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
+@OpenForTesting
 class ItemsRepository @Inject constructor(private val api: Api) {
 
     fun search(query: String): Flow<Resource<List<SearchItem>>> {

@@ -7,9 +7,11 @@ import io.github.athorfeo.architecture.model.Resource
 import io.github.athorfeo.architecture.model.SearchItem
 import io.github.athorfeo.architecture.model.Status
 import io.github.athorfeo.architecture.repository.ItemsRepository
+import io.github.athorfeo.architecture.testing.OpenForTesting
 import io.github.athorfeo.architecture.ui.base.viewmodel.BaseViewModel
 import javax.inject.Inject
 
+@OpenForTesting
 class SearchViewModel @Inject constructor(
     private val itemsRepository: ItemsRepository
 ): BaseViewModel() {

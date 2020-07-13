@@ -2,7 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-allopen'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
+
+allOpen {
+    annotation 'io.github.athorfeo.architecture.testing.OpenForTesting'
+}
 
 android {
     compileSdkVersion 29
@@ -14,8 +19,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "io.github.athorfeo.architecture.util.AppTestRunner"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -125,6 +129,7 @@ dependencies {
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_android_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_android_version"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_android_version"
 
     // Dagger
     implementation "com.google.dagger:dagger:$dagger_version"
@@ -140,7 +145,31 @@ dependencies {
     // Timber
     implementation "com.jakewharton.timber:timber:$timber_version"
 
+    /* Test Unit */
     testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    androidTestImplementation "androidx.test:core:$testing_version"
+    androidTestImplementation "androidx.test:runner:$testing_version"
+    androidTestImplementation "androidx.test:rules:$testing_version"
+    androidTestImplementation "androidx.test.ext:truth:$testing_version"
     androidTestImplementation "androidx.test.ext:junit:$test_junit_version"
+    androidTestImplementation "com.google.truth:truth:$truth_version"
+
+    testImplementation "androidx.arch.core:core-testing:$core_testing_version"
+
+    /* Espresso */
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-accessibility:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-web:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso.idling:idling-concurrent:$espresso_core_version"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$espresso_core_version"
+
+    /* Mockito */
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    testImplementation "org.mockito:mockito-inline:$mockito_version"
+    androidTestImplementation "org.mockito:mockito-core:$mockito_version"
+    androidTestImplementation "org.mockito:mockito-android:$mockito_android_version"
 }
