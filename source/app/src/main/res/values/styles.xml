@@ -17,6 +17,13 @@
         <item name="colorError">@color/colorError</item>
         <item name="colorOnError">@color/colorOnError</item>
 
+        <!-- Texts -->
+        <!-- <item name="android:textColorPrimary">@color/colorError</item> -->
+        <!-- <item name="android:textColor">@color/colorError</item> -->
+
+        <!-- Icons -->
+        <!-- <item name="colorControlNormal">@color/colorError</item> -->
+
         <item name="appBarLayoutStyle">@style/AppTheme.AppBarLayout</item>
     </style>
 
