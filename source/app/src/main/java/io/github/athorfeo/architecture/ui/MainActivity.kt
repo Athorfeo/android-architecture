@@ -1,4 +1,4 @@
-package io.github.athorfeo.architecture.ui.activity
+package io.github.athorfeo.architecture.ui
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.ui.*
 import io.github.athorfeo.architecture.R
 import io.github.athorfeo.architecture.databinding.ActivityMainBinding
+import io.github.athorfeo.architecture.ui.base.activity.BaseActivity
 import io.github.athorfeo.architecture.utils.findNavController
 
 class MainActivity: BaseActivity() {

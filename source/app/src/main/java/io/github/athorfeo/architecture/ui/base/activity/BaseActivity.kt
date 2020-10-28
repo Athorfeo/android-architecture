@@ -1,4 +1,4 @@
-package io.github.athorfeo.architecture.ui.activity
+package io.github.athorfeo.architecture.ui.base.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import dagger.android.AndroidInjector

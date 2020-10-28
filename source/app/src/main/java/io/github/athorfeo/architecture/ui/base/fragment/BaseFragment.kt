@@ -1,4 +1,4 @@
-package io.github.athorfeo.architecture.ui.fragment
+package io.github.athorfeo.architecture.ui.base.fragment
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider

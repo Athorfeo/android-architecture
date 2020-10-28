@@ -1,28 +1,20 @@
 package io.github.athorfeo.architecture.ui.dashboard
 
 import androidx.lifecycle.*
-import io.github.athorfeo.architecture.repository.MessagesRepository
 import io.github.athorfeo.architecture.repository.MovieRepository
 import javax.inject.Inject
 
 class DashboardViewModel @Inject constructor(
-    messagesRepository: MessagesRepository,
     movieRepository: MovieRepository
 ): ViewModel() {
-    //1
-    private val _messages = MediatorLiveData<String>()
-    val messages: LiveData<String> = _messages
+    val message = MutableLiveData<String>()
+    val movies = movieRepository.getFromDatabase().asLiveData()
 
     init {
-        _messages.addSource(
-            messagesRepository
-                .getMessages()
-                .asLiveData()
-        ){
-            _messages.value = it
-        }
+        message.value = "Selecte theme"
     }
 
-    //2
-    val movies = movieRepository.getFromDatabase().asLiveData()
+    fun setMessage(text: String){
+        message.value = text
+    }
 }
